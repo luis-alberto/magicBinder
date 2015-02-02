@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <RelativeLayout
+            android:id="@+id/card_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp" >
+            <TextView
+                android:id="@+id/card_id_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card_id_label"/>
+            <TextView
+                android:id="@+id/card_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/card_id_label" />
+            <TextView
+                android:id="@+id/card_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_id"
+                android:text="@string/card_name_label"/>
+            <TextView
+                android:id="@+id/card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/card_name_label" />
+            <TextView
+                android:id="@+id/card_image_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_name"
+                android:text="@string/card_image_label"/>
+            <TextView
+                android:id="@+id/card_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/card_image_label" />
+            <TextView
+                android:id="@+id/card_convertedmanacost_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_image"
+                android:text="@string/card_convertedmanacost_label"/>
+            <TextView
+                android:id="@+id/card_convertedmanacost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/card_convertedmanacost_label" />
+            <TextView
+                android:id="@+id/card_typecard_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_convertedmanacost"
+                android:text="@string/card_typecard_label"/>
+            <TextView
+                android:id="@+id/card_typecard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/card_typecard_label" />
+            <TextView
+                android:id="@+id/card_rarity_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_typecard"
+                android:text="@string/card_rarity_label"/>
+            <TextView
+                android:id="@+id/card_rarity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/card_rarity_label" />
+            <TextView
+                android:id="@+id/card_cardsetid_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_rarity"
+                android:text="@string/card_cardsetid_label"/>
+            <TextView
+                android:id="@+id/card_cardsetid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/card_cardsetid_label" />
+            <TextView
+                android:id="@+id/card_colors_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_cardsetid"
+                android:text="@string/card_colors_label"/>
+            <TextView
+                android:id="@+id/card_colors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/card_colors_label" />
+            <TextView
+                android:id="@+id/card_binders_cards_card_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_colors"
+                android:text="@string/card_binders_cards_card_label"/>
+            <TextView
+                android:id="@+id/card_binders_cards_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/card_binders_cards_card_label" />
+        </RelativeLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/card_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/card_not_found" />
+</RelativeLayout>

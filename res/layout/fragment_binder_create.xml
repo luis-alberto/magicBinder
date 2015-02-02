@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:harmony="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView
+        android:id="@+id/binder_name_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/binder_name_label"/>
+    <EditText
+        android:id="@+id/binder_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:layout_below="@+id/binder_name_label" />
+    <TextView
+        android:id="@+id/binder_binders_cards_binder_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/binder_name"
+        android:text="@string/binder_binders_cards_binder_label"/>
+    <com.magicbinder.harmony.widget.MultiEntityWidget
+        android:id="@+id/binder_binders_cards_binder_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/binder_binders_cards_binder_label" />
+</RelativeLayout>

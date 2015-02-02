@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.magicbinder"
+	android:versionCode="1"
+	android:versionName="@string/app_version"
+	android:installLocation="auto">
+	<uses-sdk
+		android:minSdkVersion="7"
+		android:targetSdkVersion="18" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<application
+		android:label="@string/app_name"
+		android:name=".MagicBinderApplication"
+		android:icon="@drawable/ic_launcher"
+		android:allowBackup="true"
+		android:theme="@style/PinnedTheme">
+		<activity
+			android:name=".HomeActivity"
+			android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.binder_card.Binder_CardCreateActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="INSERT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Binder_Card" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.binder_card.Binder_CardEditActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="EDIT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Binder_Card" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.binder_card.Binder_CardShowActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Binder_Card" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.binder_card.Binder_CardListActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.collection/com.magicbinder.Binder_Card" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.binder.BinderCreateActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="INSERT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Binder" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.binder.BinderEditActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="EDIT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Binder" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.binder.BinderShowActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Binder" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.binder.BinderListActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.collection/com.magicbinder.Binder" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.card.CardCreateActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="INSERT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Card" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.card.CardEditActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="EDIT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Card" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.card.CardShowActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Card" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.card.CardListActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.collection/com.magicbinder.Card" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.quality.QualityCreateActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="INSERT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Quality" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.quality.QualityEditActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="EDIT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Quality" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.quality.QualityShowActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Quality" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.quality.QualityListActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.collection/com.magicbinder.Quality" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.color.ColorCreateActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="INSERT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Color" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.color.ColorEditActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="EDIT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Color" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.color.ColorShowActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.item/com.magicbinder.Color" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".view.color.ColorListActivity"
+			android:label="@string/app_name"
+			android:exported="false">
+			<intent-filter>
+				<action android:name="VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.collection/com.magicbinder.Color" />
+			</intent-filter>
+		</activity>
+		<provider
+			android:name="com.magicbinder.provider.MagicBinderProvider"
+			android:authorities="com.magicbinder.provider"
+			android:label="@string/app_provider_name"
+			android:description="@string/app_provider_description"
+			android:exported="false" />
+	</application>
+</manifest>

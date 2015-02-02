@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <RelativeLayout
+            android:id="@+id/binder_card_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp" >
+            <TextView
+                android:id="@+id/binder_card_quantity_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/binder_card_quantity_label"/>
+            <TextView
+                android:id="@+id/binder_card_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/binder_card_quantity_label" />
+            <TextView
+                android:id="@+id/binder_card_card_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/binder_card_quantity"
+                android:text="@string/binder_card_card_label"/>
+            <TextView
+                android:id="@+id/binder_card_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/binder_card_card_label" />
+            <TextView
+                android:id="@+id/binder_card_binder_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/binder_card_card"
+                android:text="@string/binder_card_binder_label"/>
+            <TextView
+                android:id="@+id/binder_card_binder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/binder_card_binder_label" />
+            <TextView
+                android:id="@+id/binder_card_quality_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/binder_card_binder"
+                android:text="@string/binder_card_quality_label"/>
+            <TextView
+                android:id="@+id/binder_card_quality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:layout_below="@+id/binder_card_quality_label" />
+        </RelativeLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/binder_card_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/binder_card_not_found" />
+</RelativeLayout>
