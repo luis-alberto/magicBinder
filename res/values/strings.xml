@@ -105,4 +105,43 @@
 	<string name="quality_progress_save_message">Quality is saving to database…</string>
 	<string name="quality_progress_save_title">Quality save progress</string>
 	<string name="uri_not_supported">URI not supported</string>
+	<string name="title_activity_test1">Test1</string>
+	<string name="hello_world">Hello word</string>
+	
+	
+	<string-array name="items">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+    </string-array>
+ 
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    
+    
+    <string name="search_name_label">Card Name:</string>
+    <string name="search_name_txt">e.g. Jace</string>
+    <string name="search_text_label">Oracle:</string>
+    <string name="search_text_txt">e.g. draws a card</string>
+    <string name="search_color_label">Color:</string>
+    <string name="search_manaCost_label">Mana Cost:</string>
+    <string name="search_manaCost_txt">e.g. 1U</string>
+    <string name="search_convertedManaCost_label">Converted Mana Cost</string>
+    <string name="search_type_label">Type:</string>
+    <string name="search_subType_label">SubType:</string>
+    <string name="search_subType_txt">e.g. Human</string>
+    <string name="search_power_label">Power</string>
+    <string name="search_toughness_label">Toughness</string>
+    <string name="search_loyalty_label">Loyalty</string>
+    <string name="search_rarity_label">Rarity:</string>
+    <string name="search_artist_label">Artist:</string>
+    <string name="search_artist_txt">e.g. Aleksi Briclot</string>
+    <string name="search_set_label">Set:</string>
+    <string name="search_reset_button">RESET</string>
+    <string name="search_search_button">SEARCH</string>
+    
+    
 </resources>

@@ -58,35 +58,24 @@ public class HomeActivity extends HarmonyFragmentActivity
     @Override
     public void onClick(View v) {
         Intent intent;
-        switch (v.getId()) {
-            case R.id.binder_list_button:
-                intent = new Intent(this,
-                        BinderListActivity.class);
-                break;
-
-            case R.id.quality_list_button:
-                intent = new Intent(this,
-                        QualityListActivity.class);
-                break;
-
-            case R.id.color_list_button:
-                intent = new Intent(this,
-                        ColorListActivity.class);
-                break;
-
-            case R.id.binder_card_list_button:
-                intent = new Intent(this,
-                        Binder_CardListActivity.class);
-                break;
-
-            case R.id.card_list_button:
-                intent = new Intent(this,
-                        CardListActivity.class);
-                break;
-
-            default:
-                intent = null;
-                break;
+        int id = v.getId();
+        if (id == R.id.binder_list_button) {
+            intent = new Intent(this,
+                    BinderListActivity.class);
+        } else if (id == R.id.quality_list_button) {
+            intent = new Intent(this,
+                    QualityListActivity.class);
+        } else if (id == R.id.color_list_button) {
+            intent = new Intent(this,
+                    ColorListActivity.class);
+        } else if (id == R.id.binder_card_list_button) {
+            intent = new Intent(this,
+                    Binder_CardListActivity.class);
+        } else if (id == R.id.card_list_button) {
+            intent = new Intent(this,
+                    CardListActivity.class);
+        } else {
+            intent = null;
         }
 
         if (intent != null) {
