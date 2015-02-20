@@ -77,8 +77,7 @@ public abstract class BinderProviderAdapterBase
 
     /**
      * Constructor.
-     * @param ctx context
-     * @param db database
+     * @param provider context
      */
     public BinderProviderAdapterBase(
             MagicBinderProviderBase provider) {

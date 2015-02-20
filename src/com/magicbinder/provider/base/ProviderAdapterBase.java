@@ -46,7 +46,7 @@ public abstract class ProviderAdapterBase<T> {
     /**
      * Provider Adapter Base constructor.
      *
-     * @param context The context.
+     * @param provider The context.
      */
     public ProviderAdapterBase(
             final MagicBinderProviderBase provider,
@@ -147,7 +147,7 @@ public abstract class ProviderAdapterBase<T> {
     /**
      * Tells if this provider adapter match the given uri.
      *
-     * @param the uri
+     * @param uri
      *
      * @return true if the uri is matched by this adapter
      */

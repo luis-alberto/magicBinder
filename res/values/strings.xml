@@ -105,17 +105,23 @@
 	<string name="quality_progress_save_message">Quality is saving to database…</string>
 	<string name="quality_progress_save_title">Quality save progress</string>
 	<string name="uri_not_supported">URI not supported</string>
-	<string name="title_activity_test1">Test1</string>
 	<string name="hello_world">Hello word</string>
 	
+	<string name="name_search_list">Search List</string>
+	<string name="name_search_card_detail">Search Card Detail</string>
+	<string name="name_binder_card_detail">Binder Card Detail</string>
 	
-	<string-array name="items">
-        <item>Item 1</item>
-        <item>Item 2</item>
-        <item>Item 3</item>
-        <item>Item 4</item>
-        <item>Item 5</item>
-        <item>Item 6</item>
+	<string-array name="quantity_items">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
     </string-array>
  
     <string name="drawer_open">Open navigation drawer</string>
@@ -142,6 +148,15 @@
     <string name="search_set_label">Set:</string>
     <string name="search_reset_button">RESET</string>
     <string name="search_search_button">SEARCH</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="remove">Remove card from Binder</string>
+    <string name="eq">eq</string>
+    <string name="not">not</string>
+    <string name="lt">lt</string>
+    <string name="lte">lte</string>
+    <string name="gt">gt</string>
+    <string name="gte">gte</string>
     
     
 </resources>

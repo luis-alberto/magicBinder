@@ -30,7 +30,7 @@ import com.magicbinder.provider.contract.CardContract;
 public abstract class CardContractBase {
 
 
-        /** id. */
+    /** id. */
     public static final String COL_ID =
             "id";
     /** Alias. */
@@ -88,24 +88,24 @@ public abstract class CardContractBase {
     public static final String TABLE_NAME = "Card";
     /** Global Fields. */
     public static final String[] COLS = new String[] {
-            CardContract.COL_ID,
-            CardContract.COL_NAME,
-            CardContract.COL_IMAGE,
-            CardContract.COL_CONVERTEDMANACOST,
-            CardContract.COL_TYPECARD,
-            CardContract.COL_RARITY,
-            CardContract.COL_CARDSETID,
+        CardContract.COL_ID,
+        CardContract.COL_NAME,
+        CardContract.COL_IMAGE,
+        CardContract.COL_CONVERTEDMANACOST,
+        CardContract.COL_TYPECARD,
+        CardContract.COL_RARITY,
+        CardContract.COL_CARDSETID,
     };
 
     /** Global Fields. */
     public static final String[] ALIASED_COLS = new String[] {
-            CardContract.ALIASED_COL_ID,
-            CardContract.ALIASED_COL_NAME,
-            CardContract.ALIASED_COL_IMAGE,
-            CardContract.ALIASED_COL_CONVERTEDMANACOST,
-            CardContract.ALIASED_COL_TYPECARD,
-            CardContract.ALIASED_COL_RARITY,
-            CardContract.ALIASED_COL_CARDSETID,
+        CardContract.ALIASED_COL_ID,
+        CardContract.ALIASED_COL_NAME,
+        CardContract.ALIASED_COL_IMAGE,
+        CardContract.ALIASED_COL_CONVERTEDMANACOST,
+        CardContract.ALIASED_COL_TYPECARD,
+        CardContract.ALIASED_COL_RARITY,
+        CardContract.ALIASED_COL_CARDSETID,
     };
 
 
@@ -119,36 +119,36 @@ public abstract class CardContractBase {
     public static ContentValues itemToContentValues(final Card item) {
         final ContentValues result = new ContentValues();
 
-            result.put(CardContract.COL_ID,
+        result.put(CardContract.COL_ID,
                 String.valueOf(item.getId()));
 
-            if (item.getName() != null) {
-                result.put(CardContract.COL_NAME,
+        if (item.getName() != null) {
+            result.put(CardContract.COL_NAME,
                     item.getName());
-            }
+        }
 
-            if (item.getImage() != null) {
-                result.put(CardContract.COL_IMAGE,
+        if (item.getImage() != null) {
+            result.put(CardContract.COL_IMAGE,
                     item.getImage());
-            }
+        }
 
-            result.put(CardContract.COL_CONVERTEDMANACOST,
+        result.put(CardContract.COL_CONVERTEDMANACOST,
                 String.valueOf(item.getConvertedManaCost()));
 
-            if (item.getTypeCard() != null) {
-                result.put(CardContract.COL_TYPECARD,
+        if (item.getTypeCard() != null) {
+            result.put(CardContract.COL_TYPECARD,
                     item.getTypeCard());
-            }
+        }
 
-            if (item.getRarity() != null) {
-                result.put(CardContract.COL_RARITY,
+        if (item.getRarity() != null) {
+            result.put(CardContract.COL_RARITY,
                     item.getRarity());
-            }
+        }
 
-            if (item.getCardSetId() != null) {
-                result.put(CardContract.COL_CARDSETID,
+        if (item.getCardSetId() != null) {
+            result.put(CardContract.COL_CARDSETID,
                     item.getCardSetId());
-            }
+        }
 
 
         return result;
@@ -176,33 +176,33 @@ public abstract class CardContractBase {
         if (cursor.getCount() != 0) {
             int index;
 
-                index = cursor.getColumnIndexOrThrow(CardContract.COL_ID);
-                result.setId(
-                        cursor.getInt(index));
+            index = cursor.getColumnIndexOrThrow(CardContract.COL_ID);
+            result.setId(
+                    cursor.getInt(index));
 
-                index = cursor.getColumnIndexOrThrow(CardContract.COL_NAME);
-                result.setName(
-                        cursor.getString(index));
+            index = cursor.getColumnIndexOrThrow(CardContract.COL_NAME);
+            result.setName(
+                    cursor.getString(index));
 
-                index = cursor.getColumnIndexOrThrow(CardContract.COL_IMAGE);
-                result.setImage(
-                        cursor.getString(index));
+            index = cursor.getColumnIndexOrThrow(CardContract.COL_IMAGE);
+            result.setImage(
+                    cursor.getString(index));
 
-                index = cursor.getColumnIndexOrThrow(CardContract.COL_CONVERTEDMANACOST);
-                result.setConvertedManaCost(
-                        cursor.getInt(index));
+            index = cursor.getColumnIndexOrThrow(CardContract.COL_CONVERTEDMANACOST);
+            result.setConvertedManaCost(
+                    cursor.getInt(index));
 
-                index = cursor.getColumnIndexOrThrow(CardContract.COL_TYPECARD);
-                result.setTypeCard(
-                        cursor.getString(index));
+            index = cursor.getColumnIndexOrThrow(CardContract.COL_TYPECARD);
+            result.setTypeCard(
+                    cursor.getString(index));
 
-                index = cursor.getColumnIndexOrThrow(CardContract.COL_RARITY);
-                result.setRarity(
-                        cursor.getString(index));
+            index = cursor.getColumnIndexOrThrow(CardContract.COL_RARITY);
+            result.setRarity(
+                    cursor.getString(index));
 
-                index = cursor.getColumnIndexOrThrow(CardContract.COL_CARDSETID);
-                result.setCardSetId(
-                        cursor.getString(index));
+            index = cursor.getColumnIndexOrThrow(CardContract.COL_CARDSETID);
+            result.setCardSetId(
+                    cursor.getString(index));
 
 
         }

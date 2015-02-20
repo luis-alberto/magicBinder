@@ -26,7 +26,7 @@ public class QualityProviderAdapter
 
     /**
      * Constructor.
-     * @param ctx context
+     * @param provider context
      */
     public QualityProviderAdapter(
             final MagicBinderProviderBase provider) {

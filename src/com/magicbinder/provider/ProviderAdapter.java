@@ -26,7 +26,7 @@ public abstract class ProviderAdapter<T> extends ProviderAdapterBase<T> {
     /**
      * Provider Adapter Base constructor.
      *
-     * @param context The context.
+     * @param adapter The context.
      */
     public ProviderAdapter(
                 final MagicBinderProviderBase provider,

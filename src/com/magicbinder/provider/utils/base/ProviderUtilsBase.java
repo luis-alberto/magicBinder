@@ -53,7 +53,7 @@ public abstract class ProviderUtilsBase<T> {
 
     /**
      * Query an object of type T by the provider.
-     * @param T the item with its ids set
+     * @param item the item with its ids set
      * @return The T entity
      */
     public abstract T query(final T item);

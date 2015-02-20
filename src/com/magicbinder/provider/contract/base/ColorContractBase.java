@@ -29,7 +29,7 @@ import com.magicbinder.provider.contract.ColorContract;
 public abstract class ColorContractBase {
 
 
-        /** id. */
+    /** id. */
     public static final String COL_ID =
             "id";
     /** Alias. */
@@ -52,14 +52,14 @@ public abstract class ColorContractBase {
     public static final String TABLE_NAME = "Color";
     /** Global Fields. */
     public static final String[] COLS = new String[] {
-            ColorContract.COL_ID,
-            ColorContract.COL_LABEL,
+        ColorContract.COL_ID,
+        ColorContract.COL_LABEL,
     };
 
     /** Global Fields. */
     public static final String[] ALIASED_COLS = new String[] {
-            ColorContract.ALIASED_COL_ID,
-            ColorContract.ALIASED_COL_LABEL,
+        ColorContract.ALIASED_COL_ID,
+        ColorContract.ALIASED_COL_LABEL,
     };
 
 
@@ -73,13 +73,13 @@ public abstract class ColorContractBase {
     public static ContentValues itemToContentValues(final Color item) {
         final ContentValues result = new ContentValues();
 
-            result.put(ColorContract.COL_ID,
+        result.put(ColorContract.COL_ID,
                 String.valueOf(item.getId()));
 
-            if (item.getLabel() != null) {
-                result.put(ColorContract.COL_LABEL,
+        if (item.getLabel() != null) {
+            result.put(ColorContract.COL_LABEL,
                     item.getLabel());
-            }
+        }
 
 
         return result;
@@ -107,13 +107,13 @@ public abstract class ColorContractBase {
         if (cursor.getCount() != 0) {
             int index;
 
-                index = cursor.getColumnIndexOrThrow(ColorContract.COL_ID);
-                result.setId(
-                        cursor.getInt(index));
+            index = cursor.getColumnIndexOrThrow(ColorContract.COL_ID);
+            result.setId(
+                    cursor.getInt(index));
 
-                index = cursor.getColumnIndexOrThrow(ColorContract.COL_LABEL);
-                result.setLabel(
-                        cursor.getString(index));
+            index = cursor.getColumnIndexOrThrow(ColorContract.COL_LABEL);
+            result.setLabel(
+                    cursor.getString(index));
 
 
         }

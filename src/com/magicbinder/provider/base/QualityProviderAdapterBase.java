@@ -77,8 +77,7 @@ public abstract class QualityProviderAdapterBase
 
     /**
      * Constructor.
-     * @param ctx context
-     * @param db database
+     * @param provider context
      */
     public QualityProviderAdapterBase(
             MagicBinderProviderBase provider) {

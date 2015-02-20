@@ -29,7 +29,7 @@ import com.magicbinder.provider.contract.ColortoCardContract;
 public abstract class ColortoCardContractBase {
 
 
-        /** cards_id. */
+    /** cards_id. */
     public static final String COL_CARDS_ID =
             "cards_id";
     /** Alias. */
@@ -52,14 +52,14 @@ public abstract class ColortoCardContractBase {
     public static final String TABLE_NAME = "ColortoCard";
     /** Global Fields. */
     public static final String[] COLS = new String[] {
-            ColortoCardContract.COL_CARDS_ID,
-            ColortoCardContract.COL_COLORS_ID
+        ColortoCardContract.COL_CARDS_ID,
+        ColortoCardContract.COL_COLORS_ID
     };
 
     /** Global Fields. */
     public static final String[] ALIASED_COLS = new String[] {
-            ColortoCardContract.ALIASED_COL_CARDS_ID,
-            ColortoCardContract.ALIASED_COL_COLORS_ID
+        ColortoCardContract.ALIASED_COL_CARDS_ID,
+        ColortoCardContract.ALIASED_COL_COLORS_ID
     };
 
 }

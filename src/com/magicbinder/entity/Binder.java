@@ -6,6 +6,7 @@ import java.util.List;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import com.google.common.base.Objects.ToStringHelper;
 import com.tactfactory.harmony.annotation.Column;
 import com.tactfactory.harmony.annotation.Column.Type;
 import com.tactfactory.harmony.annotation.Entity;
@@ -164,7 +165,7 @@ public class Binder implements Serializable , Parcelable {
      * Use this method to write this entity to a parcel from another entity.
      * (Useful for relations)
      *
-     * @param parent The entity being parcelled that need to parcel this one
+     * @param parents The entity being parcelled that need to parcel this one
      * @param dest The destination parcel
      * @param flags The flags
      */
@@ -194,5 +195,25 @@ public class Binder implements Serializable , Parcelable {
             return new Binder[size];
         }
     };
+    /**
+     * Return name of binder.
+     * @return Name of binder.
+     */
+    @Override
+    public String toString(){
+        return this.name;
+    }
+    
+    /**
+     * Compare if binders are the same.
+     * @param binder to compare.
+     * @return true if equals or false if not equals.
+     */
+    public boolean equalsBinder(Binder binder){
+        if(this.id == binder.getId()){
+            return true;
+        }
+        return false;
+    }
 
 }

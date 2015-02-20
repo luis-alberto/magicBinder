@@ -10,12 +10,9 @@
  **************************************************************************/
 package com.magicbinder;
 
-import java.util.ArrayList;
-
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.support.v4.util.LruCache;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
@@ -40,6 +37,7 @@ public class MagicBinderApplication extends MagicBinderApplicationBase {
      * DEBUG.
      */
     public static final boolean DEBUG = true;
+    //tags
     private static final String PREFS_NAME = "MagicBinderPrefsFile";
     private static final String FIRST_TIME = "firstTime";
     private static final String BINDER_NB = "BINDER%d";
@@ -56,8 +54,6 @@ public class MagicBinderApplication extends MagicBinderApplicationBase {
         super.onCreate();
         initSettings();
         magicBinderInstance = this;
-        Toast toast = Toast.makeText(this, "TEEEESSSSSSTT", Toast.LENGTH_LONG);
-        toast.show();
         requestQueue = Volley.newRequestQueue(this);
         imageLoader = new ImageLoader(this.requestQueue, new ImageLoader.ImageCache() {
              

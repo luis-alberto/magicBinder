@@ -11,6 +11,7 @@
 
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".MagicBinderApplication"
@@ -275,13 +276,18 @@
             android:exported="false"
             android:label="@string/app_provider_name" />
 
-        <activity
-            android:name=".Test1"
-            android:label="@string/title_activity_test1" >
-        </activity>
+
         <activity
             android:name=".view.search.SearchListActivity"
-            android:label="@string/title_activity_test1" >
+            android:label="@string/name_search_list">
+        </activity>
+        <activity
+            android:name=".view.card.CardDetailActivity"
+            android:label="@string/name_search_card_detail" >
+        </activity>
+        <activity
+            android:name=".view.binder.BinderCardDetailActivity"
+            android:label="@string/name_binder_card_detail" >
         </activity>
     </application>
 

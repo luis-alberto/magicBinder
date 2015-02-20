@@ -1,19 +1,20 @@
 package com.magicbinder.entity;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-import java.util.List;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.tactfactory.harmony.annotation.Column;
 import com.tactfactory.harmony.annotation.Column.Type;
 import com.tactfactory.harmony.annotation.Entity;
 import com.tactfactory.harmony.annotation.GeneratedValue;
-import com.tactfactory.harmony.annotation.OneToMany;
 import com.tactfactory.harmony.annotation.GeneratedValue.Strategy;
 import com.tactfactory.harmony.annotation.Id;
 import com.tactfactory.harmony.annotation.ManyToMany;
+import com.tactfactory.harmony.annotation.OneToMany;
 
 
 @Entity
@@ -302,7 +303,7 @@ public class Card  implements Serializable , Parcelable {
      * Use this method to write this entity to a parcel from another entity.
      * (Useful for relations)
      *
-     * @param parent The entity being parcelled that need to parcel this one
+     * @param parents The entity being parcelled that need to parcel this one
      * @param dest The destination parcel
      * @param flags The flags
      */
@@ -332,5 +333,24 @@ public class Card  implements Serializable , Parcelable {
             return new Card[size];
         }
     };
+    /**
+     * Return name of card.
+     * @return Name of card.
+     */
+    @Override
+    public String toString(){
+        return this.name;
+    }
+    /**
+     * Compare if cards are the same.
+     * @param card to compare.
+     * @return true if equals or false if not equals.
+     */
+    public boolean equalsCard(Card card){
+        if(this.id == card.getId()){
+            return true;
+        }
+        return false;
+    }
 
 }

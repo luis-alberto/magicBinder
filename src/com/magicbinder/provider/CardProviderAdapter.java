@@ -26,7 +26,7 @@ public class CardProviderAdapter
 
     /**
      * Constructor.
-     * @param ctx context
+     * @param provider context
      */
     public CardProviderAdapter(
             final MagicBinderProviderBase provider) {

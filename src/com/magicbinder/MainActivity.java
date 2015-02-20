@@ -19,31 +19,55 @@ import com.magicbinder.adapter.BinderPagerAdapter;
 import com.magicbinder.data.BinderSQLiteAdapter;
 import com.magicbinder.entity.Binder;
 import com.magicbinder.harmony.view.HarmonyFragmentActivity;
-import com.magicbinder.view.SearchMenuFragment;
+import com.magicbinder.view.search.SearchMenuFragment;
 
+/**
+ * Main Activity
+ * @author Luis
+ *
+ */
 public class MainActivity extends HarmonyFragmentActivity
 implements ActionBar.TabListener{
 
+	/**
+	 * Create binder name.
+	 */
     public static final String BINDER_NB = "binder%d";
-
+    /**
+     * ViewPager.
+     */
     private ViewPager viewPager;
+    /**
+     * PagerAdapter for Binder.
+     */
     private BinderPagerAdapter binderPagerAdapter;
+    /**
+     * ActionBa.r
+     */
     private ActionBar actionBar;
-    private DrawerLayout mainLoyoutDrawerLayout; //Layout Principal
-    private ActionBarDrawerToggle actionBarDrawerToggle; //Gère l'ouverture et la fermeture du menu
-    private FrameLayout searchMenuFrameLayout;
+    /**
+     * DrawerLayout from main_activity.
+     */
+    private DrawerLayout mainLoyoutDrawerLayout;
+    /**
+     * ActionBarDrawerToggle.
+     */
+    private ActionBarDrawerToggle actionBarDrawerToggle;
+    /**
+     * SearchMenuLayout.
+     */    private FrameLayout searchMenuFrameLayout;
 
+    /**
+     * Creating activity.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        //BinderSQLiteAdapter binderAdapter = new BinderSQLiteAdapter(HomeActivity.this);
-        //BinderSQLiteAdapter binderAdapter = new BinderSQLiteAdapter(HomeActivity.this);
+        // Initilization
         ArrayList<Binder> binders= getBinders();
 
-
-        // Initilization
         mainLoyoutDrawerLayout = (DrawerLayout) findViewById(R.id.main_layout);
         mainLoyoutDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         
@@ -59,46 +83,50 @@ implements ActionBar.TabListener{
         
         
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, mainLoyoutDrawerLayout,
-                R.drawable.ic_drawer, R.string.drawer_open,
+                R.drawable.ic_action_search, R.string.drawer_open,
                 R.string.drawer_close) {
- 
+        	/**
+        	 * Action when close drawer.
+        	 */
             public void onDrawerClosed(View view) {
                 // TODO Auto-generated method stub
+                getSupportActionBar().setTitle(R.string.app_name);
                 super.onDrawerClosed(view);
             }
  
+            /**
+             * Action when open drawer.
+             */
             public void onDrawerOpened(View drawerView) {
                 // TODO Auto-generated method stub
                 // Set the title on the action when drawer open
-                getSupportActionBar().setTitle("OPEN");
+                getSupportActionBar().setTitle(R.string.search_search_button);
                 super.onDrawerOpened(drawerView);
             }
         };
  
         mainLoyoutDrawerLayout.setDrawerListener(actionBarDrawerToggle);
  
-        
- /////////////////////////////////////////////////////////////////////////////////////////////////
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        //Contruction of viewpager
         actionBar = getActionBar();
-        //mAdapter = new TabsPagerAdapter(getSupportFragmentManager());
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
         binderPagerAdapter = new BinderPagerAdapter(getSupportFragmentManager(),this);
-
         viewPager.setAdapter(binderPagerAdapter);
-        //actionBar.setHomeButtonEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);        
 
         // Adding Tabs
         for (Binder binder : binders) {
-            actionBar.addTab(actionBar.newTab().setText(binder.getId()+binder.getName())
+            actionBar.addTab(actionBar.newTab().setText(binder.getName())
                     .setTabListener(this));
         }
 
         /**
-         * on swiping the viewpager make respective tab selected
-         * */
+         * on swiping the viewpager make respective tab selected.
+         */
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
+        	/**.
+        	 * Select Tab when selected pager.
+        	 */
             @Override
             public void onPageSelected(int position) {
                 // on changing the page
@@ -116,7 +144,24 @@ implements ActionBar.TabListener{
         });
     }
 
-    ////////////////////////////////////////////////////////////////////////
+    /**
+     * Update fragment when focus activity.
+     */
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        binderPagerAdapter = new BinderPagerAdapter(getSupportFragmentManager(),this);
+        viewPager.setAdapter(binderPagerAdapter);
+        viewPager.setCurrentItem(actionBar.getSelectedTab().getPosition());
+        if (mainLoyoutDrawerLayout.isDrawerOpen(searchMenuFrameLayout)) {
+            mainLoyoutDrawerLayout.closeDrawer(searchMenuFrameLayout);
+        }
+    }
+    
+    /**
+     * Update Fragment for tab selected.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
  
@@ -124,33 +169,43 @@ implements ActionBar.TabListener{
  
             if (mainLoyoutDrawerLayout.isDrawerOpen(searchMenuFrameLayout)) {
                 mainLoyoutDrawerLayout.closeDrawer(searchMenuFrameLayout);
-//                actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
             } else {
                 mainLoyoutDrawerLayout.openDrawer(searchMenuFrameLayout);
-//                actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
             }
         }
  
         return super.onOptionsItemSelected(item);
     }
+    /**
+     * OnPostCreated actionBarDrawerToggle.
+     */
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
         actionBarDrawerToggle.syncState();
     }
- 
+
+    /**
+     * OnConfigurationChanged to actionBarDrawerToggle.
+     */
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggles
         actionBarDrawerToggle.onConfigurationChanged(newConfig);
     }
-    ///////////////////////////////////////////////////////////////////////
+
+    /**
+     * onTabSelected action
+     */
     @Override
     public void onTabSelected(Tab tab, android.app.FragmentTransaction ft) {
-        // TODO Auto-generated method stub
+        //close drawer if change tab
         viewPager.setCurrentItem(tab.getPosition());
+        if (mainLoyoutDrawerLayout.isDrawerOpen(searchMenuFrameLayout)) {
+            mainLoyoutDrawerLayout.closeDrawer(searchMenuFrameLayout);
+        }
     }
 
     @Override
@@ -165,8 +220,8 @@ implements ActionBar.TabListener{
 
     }
     /**
-     * Get Binders from BDD
-     * @return ArrayList<Binder>
+     * Get Binders from BDD.
+     * @return ArrayList<Binder> Get all Binders from BDD.
      */
     public ArrayList<Binder> getBinders(){
         BinderSQLiteAdapter binderAdapter = new BinderSQLiteAdapter(this);

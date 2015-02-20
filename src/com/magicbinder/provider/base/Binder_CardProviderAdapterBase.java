@@ -92,8 +92,7 @@ public abstract class Binder_CardProviderAdapterBase
 
     /**
      * Constructor.
-     * @param ctx context
-     * @param db database
+     * @param provider context
      */
     public Binder_CardProviderAdapterBase(
             MagicBinderProviderBase provider) {

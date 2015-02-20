@@ -8,6 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/abs__background_holo_dark"
         android:padding="8dp" >
 
         <TextView
@@ -19,8 +20,10 @@
             android:id="@+id/search_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/search_name_txt" >
+            android:hint="@string/search_name_txt"
+            android:digits="abcdefghijklmnopqrstuvwxyz012345789"
+            android:singleLine="true" >
+            
         </EditText>
 
         <TextView
@@ -32,8 +35,9 @@
             android:id="@+id/search_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/search_text_txt" >
+            android:hint="@string/search_text_txt"
+            android:digits="abcdefghijklmnopqrstuvwxyz012345789"
+            android:singleLine="true">
         </EditText>
 
         <TextView
@@ -41,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="@string/search_color_label" />
 
-        <com.magicbinder.component.MultiSelectionSpinner
+        <Spinner
             android:id="@+id/search_colors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -55,8 +59,9 @@
             android:id="@+id/search_manaCost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/search_manaCost_txt" >
+            android:hint="@string/search_manaCost_txt" 
+            android:digits="abcdefghijklmnopqrstuvwxyz012345789"
+            android:singleLine="true">
         </EditText>
 
         <LinearLayout
@@ -79,7 +84,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:ems="10" >
+	            android:singleLine="true">
             </EditText>
         </LinearLayout>
 
@@ -102,8 +107,9 @@
             android:id="@+id/search_subType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/search_subType_txt" >
+            android:hint="@string/search_subType_txt"
+            android:digits="abcdefghijklmnopqrstuvwxyz012345789"
+            android:singleLine="true" >
         </EditText>
 
         <LinearLayout
@@ -126,7 +132,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:ems="10" >
+	            android:singleLine="true">
             </EditText>
         </LinearLayout>
 
@@ -150,7 +156,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:ems="10" >
+	            android:singleLine="true">
             </EditText>
         </LinearLayout>
 
@@ -174,7 +180,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:ems="10" >
+	            android:singleLine="true">
             </EditText>
         </LinearLayout>
 
@@ -197,8 +203,9 @@
             android:id="@+id/search_artist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/search_artist_txt" >
+            android:hint="@string/search_artist_txt"
+            android:digits="abcdefghijklmnopqrstuvwxyz012345789"
+            android:singleLine="true">
         </EditText>
 
         <TextView

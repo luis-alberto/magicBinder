@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 import com.magicbinder.data.base.ColorSQLiteAdapterBase;
 import com.magicbinder.entity.Color;
-import com.magicbinder.provider.contract.CardContract;
 
 
 /**

@@ -9,4 +9,5 @@
  android:columnWidth="90dp"
  android:stretchMode="columnWidth"
  android:gravity="center"
+ android:background="@color/abs__bright_foreground_disabled_holo_dark" 
 />

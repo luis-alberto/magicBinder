@@ -12,10 +12,27 @@ import android.widget.TextView;
 import com.magicbinder.R;
 import com.magicbinder.entity.Set;
 
+/**
+ * ArrayAdapter for SetSpinner.
+ * @author Luis
+ *
+ */
 public class SetSpinnerAdapter extends ArrayAdapter<Set> {
+	/**
+	 * Context of activity.
+	 */
     private Activity context;
-    ArrayList<Set> data = null;
+    /**
+     * Array list of sets.
+     */
+    private ArrayList<Set> data = null;
  
+    /**
+     * Constructor of SetSpinnerAdapter.
+     * @param context .
+     * @param resource .
+     * @param data .
+     */
     public SetSpinnerAdapter(Activity context, int resource,
             ArrayList<Set> data) {
         super(context, resource, data);
@@ -23,11 +40,17 @@ public class SetSpinnerAdapter extends ArrayAdapter<Set> {
         this.data = data;
     }
  
+    /**
+     * Get view of fragment.
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) { 
         return super.getView(position, convertView, parent);
     }
- 
+
+    /**
+     * Create and build dropdowns component.
+     */
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) { 
         View row = convertView;

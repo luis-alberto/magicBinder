@@ -143,8 +143,8 @@ public abstract class ColortoCardSQLiteAdapterBase
     /**
      * Insert a ColortoCard entity into database.
      *
-     * @param cards cards
-     * @param colors colors
+     * @param cardsId cards
+     * @param colorsId colors
      * @return Id of the ColortoCard entity
      */
     public long insert(final int cardsId,
@@ -168,7 +168,7 @@ public abstract class ColortoCardSQLiteAdapterBase
 
     /**
      * Find & read ColortoCard by cards.
-     * @param cards colors
+     * @param cardsId colors
      * @param orderBy Order by string (can be null)
      * @return ArrayList of Color matching cards
      */
@@ -218,7 +218,7 @@ public abstract class ColortoCardSQLiteAdapterBase
 
     /**
      * Find & read ColortoCard by colors.
-     * @param colors cards
+     * @param colorsId cards
      * @param orderBy Order by string (can be null)
      * @return ArrayList of Card matching colors
      */

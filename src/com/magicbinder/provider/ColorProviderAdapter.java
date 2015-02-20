@@ -26,7 +26,7 @@ public class ColorProviderAdapter
 
     /**
      * Constructor.
-     * @param ctx context
+     * @param provider context
      */
     public ColorProviderAdapter(
             final MagicBinderProviderBase provider) {

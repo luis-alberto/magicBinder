@@ -31,7 +31,7 @@ import com.magicbinder.provider.contract.Binder_CardContract;
 public abstract class Binder_CardContractBase {
 
 
-        /** id. */
+    /** id. */
     public static final String COL_ID =
             "id";
     /** Alias. */
@@ -75,20 +75,20 @@ public abstract class Binder_CardContractBase {
     public static final String TABLE_NAME = "Binder_Card";
     /** Global Fields. */
     public static final String[] COLS = new String[] {
-            Binder_CardContract.COL_ID,
-            Binder_CardContract.COL_QUANTITY,
-            Binder_CardContract.COL_CARD_ID,
-            Binder_CardContract.COL_BINDER_ID,
-            Binder_CardContract.COL_QUALITY_ID
+        Binder_CardContract.COL_ID,
+        Binder_CardContract.COL_QUANTITY,
+        Binder_CardContract.COL_CARD_ID,
+        Binder_CardContract.COL_BINDER_ID,
+        Binder_CardContract.COL_QUALITY_ID
     };
 
     /** Global Fields. */
     public static final String[] ALIASED_COLS = new String[] {
-            Binder_CardContract.ALIASED_COL_ID,
-            Binder_CardContract.ALIASED_COL_QUANTITY,
-            Binder_CardContract.ALIASED_COL_CARD_ID,
-            Binder_CardContract.ALIASED_COL_BINDER_ID,
-            Binder_CardContract.ALIASED_COL_QUALITY_ID
+        Binder_CardContract.ALIASED_COL_ID,
+        Binder_CardContract.ALIASED_COL_QUANTITY,
+        Binder_CardContract.ALIASED_COL_CARD_ID,
+        Binder_CardContract.ALIASED_COL_BINDER_ID,
+        Binder_CardContract.ALIASED_COL_QUALITY_ID
     };
 
 
@@ -102,26 +102,26 @@ public abstract class Binder_CardContractBase {
     public static ContentValues itemToContentValues(final Binder_Card item) {
         final ContentValues result = new ContentValues();
 
-            result.put(Binder_CardContract.COL_ID,
+        result.put(Binder_CardContract.COL_ID,
                 String.valueOf(item.getId()));
 
-            result.put(Binder_CardContract.COL_QUANTITY,
+        result.put(Binder_CardContract.COL_QUANTITY,
                 String.valueOf(item.getQuantity()));
 
-            if (item.getCard() != null) {
-                result.put(Binder_CardContract.COL_CARD_ID,
+        if (item.getCard() != null) {
+            result.put(Binder_CardContract.COL_CARD_ID,
                     item.getCard().getId());
-            }
+        }
 
-            if (item.getBinder() != null) {
-                result.put(Binder_CardContract.COL_BINDER_ID,
+        if (item.getBinder() != null) {
+            result.put(Binder_CardContract.COL_BINDER_ID,
                     item.getBinder().getId());
-            }
+        }
 
-            if (item.getQuality() != null) {
-                result.put(Binder_CardContract.COL_QUALITY_ID,
+        if (item.getQuality() != null) {
+            result.put(Binder_CardContract.COL_QUALITY_ID,
                     item.getQuality().getId());
-            }
+        }
 
 
         return result;
@@ -149,34 +149,34 @@ public abstract class Binder_CardContractBase {
         if (cursor.getCount() != 0) {
             int index;
 
-                index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_ID);
-                result.setId(
-                        cursor.getInt(index));
+            index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_ID);
+            result.setId(
+                    cursor.getInt(index));
 
-                index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_QUANTITY);
-                result.setQuantity(
-                        cursor.getInt(index));
+            index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_QUANTITY);
+            result.setQuantity(
+                    cursor.getInt(index));
 
-                if (result.getCard() == null) {
-                    final Card card = new Card();
-                    index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_CARD_ID);
-                    card.setId(cursor.getInt(index));
-                    result.setCard(card);
-                }
+            if (result.getCard() == null) {
+                final Card card = new Card();
+                index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_CARD_ID);
+                card.setId(cursor.getInt(index));
+                result.setCard(card);
+            }
 
-                if (result.getBinder() == null) {
-                    final Binder binder = new Binder();
-                    index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_BINDER_ID);
-                    binder.setId(cursor.getInt(index));
-                    result.setBinder(binder);
-                }
+            if (result.getBinder() == null) {
+                final Binder binder = new Binder();
+                index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_BINDER_ID);
+                binder.setId(cursor.getInt(index));
+                result.setBinder(binder);
+            }
 
-                if (result.getQuality() == null) {
-                    final Quality quality = new Quality();
-                    index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_QUALITY_ID);
-                    quality.setId(cursor.getInt(index));
-                    result.setQuality(quality);
-                }
+            if (result.getQuality() == null) {
+                final Quality quality = new Quality();
+                index = cursor.getColumnIndexOrThrow(Binder_CardContract.COL_QUALITY_ID);
+                quality.setId(cursor.getInt(index));
+                result.setQuality(quality);
+            }
 
 
         }

@@ -187,7 +187,9 @@ public class CriteriaExpression implements Serializable, ICriteria {
          * Get the SQL String transcryption.
          * @return The SQL version of the Enum
          */
-        public String getSqlType() { return this.sql; }
+        public String getSqlType() { 
+        	return this.sql;
+        }
     }
 
     /**

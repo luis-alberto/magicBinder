@@ -10,12 +10,27 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.magicbinder.R;
-
+/**
+ * ArrayAdapter for a simple spinner.
+ * @author Luis
+ *
+ */
 public class SimpleSpinnerAdapter extends ArrayAdapter<String>{
-
+	/**
+	 * Context of activity.
+	 */
     private Activity context;
+    /**
+     * Arraylist of strings.
+     */
     ArrayList<String> data = null;
 
+    /**
+     * Constructor of SimpleSpinnerAdapter.
+     * @param context .
+     * @param resource .
+     * @param data .
+     */
     public SimpleSpinnerAdapter(Activity context, int resource,
             ArrayList<String> data) {
         super(context, resource, data);
@@ -23,11 +38,17 @@ public class SimpleSpinnerAdapter extends ArrayAdapter<String>{
         this.data = data;
     }
 
+    /**
+     * Get view of fragment.
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) { 
         return super.getView(position, convertView, parent);
     }
 
+    /**
+     * Create and build dropdowns component.
+     */
     @Override
     public View getDropDownView(int position, View convertView, ViewGroup parent) { 
         View row = convertView;
@@ -43,9 +64,7 @@ public class SimpleSpinnerAdapter extends ArrayAdapter<String>{
             if(textView != null) {
                 textView.setText(item);
             }
-
         }
-
         return row;
     }
 }

@@ -78,8 +78,7 @@ public abstract class ColorProviderAdapterBase
 
     /**
      * Constructor.
-     * @param ctx context
-     * @param db database
+     * @param provider context
      */
     public ColorProviderAdapterBase(
             MagicBinderProviderBase provider) {

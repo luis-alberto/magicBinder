@@ -11,27 +11,20 @@
 package com.magicbinder.data.base;
 
 import java.util.ArrayList;
+
 import android.content.ContentValues;
 
-
-import android.database.sqlite.SQLiteDatabase;
-
-
-import com.magicbinder.data.SQLiteAdapter;
-import com.magicbinder.data.CardSQLiteAdapter;
-import com.magicbinder.data.ColortoCardSQLiteAdapter;
-import com.magicbinder.data.ColorSQLiteAdapter;
+import com.magicbinder.MagicBinderApplication;
 import com.magicbinder.data.Binder_CardSQLiteAdapter;
-import com.magicbinder.provider.contract.CardContract;
-import com.magicbinder.provider.contract.ColortoCardContract;
-import com.magicbinder.provider.contract.ColorContract;
-import com.magicbinder.provider.contract.Binder_CardContract;
+import com.magicbinder.data.ColorSQLiteAdapter;
+import com.magicbinder.data.ColortoCardSQLiteAdapter;
+import com.magicbinder.data.SQLiteAdapter;
+import com.magicbinder.entity.Binder_Card;
 import com.magicbinder.entity.Card;
 import com.magicbinder.entity.Color;
-import com.magicbinder.entity.Binder_Card;
-
-
-import com.magicbinder.MagicBinderApplication;
+import com.magicbinder.provider.contract.Binder_CardContract;
+import com.magicbinder.provider.contract.CardContract;
+import com.magicbinder.provider.contract.ColorContract;
 
 
 /** Card adapter database abstract class. <br/>

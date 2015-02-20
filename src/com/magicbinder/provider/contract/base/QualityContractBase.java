@@ -29,7 +29,7 @@ import com.magicbinder.provider.contract.QualityContract;
 public abstract class QualityContractBase {
 
 
-        /** id. */
+    /** id. */
     public static final String COL_ID =
             "id";
     /** Alias. */
@@ -52,14 +52,14 @@ public abstract class QualityContractBase {
     public static final String TABLE_NAME = "Quality";
     /** Global Fields. */
     public static final String[] COLS = new String[] {
-            QualityContract.COL_ID,
-            QualityContract.COL_LABEL,
+        QualityContract.COL_ID,
+        QualityContract.COL_LABEL,
     };
 
     /** Global Fields. */
     public static final String[] ALIASED_COLS = new String[] {
-            QualityContract.ALIASED_COL_ID,
-            QualityContract.ALIASED_COL_LABEL,
+        QualityContract.ALIASED_COL_ID,
+        QualityContract.ALIASED_COL_LABEL,
     };
 
 
@@ -73,13 +73,13 @@ public abstract class QualityContractBase {
     public static ContentValues itemToContentValues(final Quality item) {
         final ContentValues result = new ContentValues();
 
-            result.put(QualityContract.COL_ID,
+        result.put(QualityContract.COL_ID,
                 String.valueOf(item.getId()));
 
-            if (item.getLabel() != null) {
-                result.put(QualityContract.COL_LABEL,
+        if (item.getLabel() != null) {
+            result.put(QualityContract.COL_LABEL,
                     item.getLabel());
-            }
+        }
 
 
         return result;
@@ -107,13 +107,13 @@ public abstract class QualityContractBase {
         if (cursor.getCount() != 0) {
             int index;
 
-                index = cursor.getColumnIndexOrThrow(QualityContract.COL_ID);
-                result.setId(
-                        cursor.getInt(index));
+            index = cursor.getColumnIndexOrThrow(QualityContract.COL_ID);
+            result.setId(
+                    cursor.getInt(index));
 
-                index = cursor.getColumnIndexOrThrow(QualityContract.COL_LABEL);
-                result.setLabel(
-                        cursor.getString(index));
+            index = cursor.getColumnIndexOrThrow(QualityContract.COL_LABEL);
+            result.setLabel(
+                    cursor.getString(index));
 
 
         }

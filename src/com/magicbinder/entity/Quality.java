@@ -163,7 +163,7 @@ public class Quality  implements Serializable , Parcelable {
      * Use this method to write this entity to a parcel from another entity.
      * (Useful for relations)
      *
-     * @param parent The entity being parcelled that need to parcel this one
+     * @param parents The entity being parcelled that need to parcel this one
      * @param dest The destination parcel
      * @param flags The flags
      */
@@ -193,5 +193,25 @@ public class Quality  implements Serializable , Parcelable {
             return new Quality[size];
         }
     };
+    /**
+     * Return label of quality.
+     * @return String Label of card.
+     */
+    @Override
+    public String toString(){
+        return this.label;
+    }
+    
+    /**
+     * Compare if qualities are the same.
+     * @param quality to compare.
+     * @return true if equals or false if not equals.
+     */
+    public boolean equalsQuality(Quality quality){
+        if(this.id == quality.getId()){
+            return true;
+        }
+        return false;
+    }
 
 }

@@ -26,7 +26,7 @@ public class BinderProviderAdapter
 
     /**
      * Constructor.
-     * @param ctx context
+     * @param provider context
      */
     public BinderProviderAdapter(
             final MagicBinderProviderBase provider) {

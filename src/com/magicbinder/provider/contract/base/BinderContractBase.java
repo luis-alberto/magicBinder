@@ -29,7 +29,7 @@ import com.magicbinder.provider.contract.BinderContract;
 public abstract class BinderContractBase {
 
 
-        /** id. */
+    /** id. */
     public static final String COL_ID =
             "id";
     /** Alias. */
@@ -52,14 +52,14 @@ public abstract class BinderContractBase {
     public static final String TABLE_NAME = "Binder";
     /** Global Fields. */
     public static final String[] COLS = new String[] {
-            BinderContract.COL_ID,
-            BinderContract.COL_NAME,
+        BinderContract.COL_ID,
+        BinderContract.COL_NAME,
     };
 
     /** Global Fields. */
     public static final String[] ALIASED_COLS = new String[] {
-            BinderContract.ALIASED_COL_ID,
-            BinderContract.ALIASED_COL_NAME,
+        BinderContract.ALIASED_COL_ID,
+        BinderContract.ALIASED_COL_NAME,
     };
 
 
@@ -73,13 +73,13 @@ public abstract class BinderContractBase {
     public static ContentValues itemToContentValues(final Binder item) {
         final ContentValues result = new ContentValues();
 
-            result.put(BinderContract.COL_ID,
+        result.put(BinderContract.COL_ID,
                 String.valueOf(item.getId()));
 
-            if (item.getName() != null) {
-                result.put(BinderContract.COL_NAME,
+        if (item.getName() != null) {
+            result.put(BinderContract.COL_NAME,
                     item.getName());
-            }
+        }
 
 
         return result;
@@ -107,13 +107,13 @@ public abstract class BinderContractBase {
         if (cursor.getCount() != 0) {
             int index;
 
-                index = cursor.getColumnIndexOrThrow(BinderContract.COL_ID);
-                result.setId(
-                        cursor.getInt(index));
+            index = cursor.getColumnIndexOrThrow(BinderContract.COL_ID);
+            result.setId(
+                    cursor.getInt(index));
 
-                index = cursor.getColumnIndexOrThrow(BinderContract.COL_NAME);
-                result.setName(
-                        cursor.getString(index));
+            index = cursor.getColumnIndexOrThrow(BinderContract.COL_NAME);
+            result.setName(
+                    cursor.getString(index));
 
 
         }

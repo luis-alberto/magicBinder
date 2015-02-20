@@ -92,7 +92,7 @@ implements LoaderManager.LoaderCallbacks<android.database.Cursor> {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         try {
             MagicBinderMenu.getInstance(this.getActivity(), this)
-            .onActivityResult(requestCode, resultCode, data, this.getActivity(),
+                .onActivityResult(requestCode, resultCode, data, this.getActivity(),
             this);
         } catch (Exception e) {
             e.printStackTrace();

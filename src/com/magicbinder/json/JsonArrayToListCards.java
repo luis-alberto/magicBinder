@@ -12,16 +12,38 @@ import com.magicbinder.data.ColorSQLiteAdapter;
 import com.magicbinder.entity.Card;
 import com.magicbinder.entity.Color;
 
+/**
+ * Converted JsonArray to List of cards.
+ * @author Luis
+ *
+ */
 public class JsonArrayToListCards {
-    protected static final String URL_IMG = "http://api.mtgdb.info/content/hi_res_card_images/%s.jpg";
+	/**
+	 * URL image.
+	 */
+    protected static final String URL_IMG = "http://mtgimage.com/multiverseid/%s.jpg";
+    /**
+     * Context of activity.
+     */
     private Context context;
+    /**
+     * ColorSqLiteAdapter.
+     */
     private ColorSQLiteAdapter colorAdapter;
 
+    /**
+     * Constructor of JsonArrayToListCards.
+     * @param context of the activity.
+     */
     public JsonArrayToListCards(Context context) {
-        // TODO Auto-generated constructor stub
         this.context = context;
     }
 
+    /**
+     * Convert String Json in List of cards.
+     * @param json in string format.
+     * @return Arraylist of Cards.
+     */
     public ArrayList<Card> getListCard(String json){
         ArrayList<Card> listCards = new ArrayList<Card>();
         try {
@@ -52,10 +74,8 @@ public class JsonArrayToListCards {
                 listCards.add(card);
             }
         } catch (JSONException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
         return listCards;
     }
 

@@ -164,7 +164,7 @@ public class Color implements Serializable , Parcelable {
      * Use this method to write this entity to a parcel from another entity.
      * (Useful for relations)
      *
-     * @param parent The entity being parcelled that need to parcel this one
+     * @param parents The entity being parcelled that need to parcel this one
      * @param dest The destination parcel
      * @param flags The flags
      */
@@ -194,5 +194,26 @@ public class Color implements Serializable , Parcelable {
             return new Color[size];
         }
     };
+    
+    /**
+     * Return label of color.
+     * @return String Label of color.
+     */
+    @Override
+    public String toString(){
+        return this.label;
+    }
+    
+    /**
+     * Compare if colors are the same.
+     * @param color to compare.
+     * @return true if equals or false if not equals.
+     */
+    public boolean equalsColor(Color color){
+        if(this.id == color.getId()){
+            return true;
+        }
+        return false;
+    }
 
 }

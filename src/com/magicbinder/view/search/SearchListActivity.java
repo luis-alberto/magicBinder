@@ -11,10 +11,27 @@ import com.magicbinder.entity.Card;
 import com.magicbinder.harmony.view.HarmonyFragmentActivity;
 import com.magicbinder.json.JsonArrayToListCards;
 
+/**
+ * SearchListActivity activity for result search.
+ * @author Luis
+ *
+ */
 public class SearchListActivity extends HarmonyFragmentActivity{
+	/**
+	 * Tag putextra mesage.
+	 */
     private final static String MESSAGE = "message";
+    /**
+     * String of result search.
+     */
     private String searchResult;
+    /**
+     * Intent of activity.
+     */
     private Intent intent;
+    /**
+     * creating activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

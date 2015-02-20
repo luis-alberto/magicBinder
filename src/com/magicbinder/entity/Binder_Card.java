@@ -193,7 +193,7 @@ public class Binder_Card  implements Serializable , Parcelable {
      * Use this method to write this entity to a parcel from another entity.
      * (Useful for relations)
      *
-     * @param parent The entity being parcelled that need to parcel this one
+     * @param parents The entity being parcelled that need to parcel this one
      * @param dest The destination parcel
      * @param flags The flags
      */
@@ -223,5 +223,17 @@ public class Binder_Card  implements Serializable , Parcelable {
             return new Binder_Card[size];
         }
     };
-
+    
+    /**
+     * Compare if binder_card are the same.
+     * @param binderCard to compare.
+     * @return true if equals or false if not equals.
+     */
+    public boolean equals(Binder_Card binderCard){
+        if(this.id == binderCard.getId()){
+            return true;
+        }
+        return false;
+        
+    }
 }

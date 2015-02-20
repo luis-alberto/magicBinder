@@ -83,8 +83,7 @@ public abstract class ColortoCardProviderAdapterBase
 
     /**
      * Constructor.
-     * @param ctx context
-     * @param db database
+     * @param provider context
      */
     public ColortoCardProviderAdapterBase(
             MagicBinderProviderBase provider) {
