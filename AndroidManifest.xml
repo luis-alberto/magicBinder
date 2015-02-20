@@ -21,7 +21,8 @@
         android:theme="@style/PinnedTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -279,15 +280,18 @@
 
         <activity
             android:name=".view.search.SearchListActivity"
-            android:label="@string/name_search_list">
+            android:label="@string/name_search_list"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".view.card.CardDetailActivity"
-            android:label="@string/name_search_card_detail" >
+            android:label="@string/name_search_card_detail"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".view.binder.BinderCardDetailActivity"
-            android:label="@string/name_binder_card_detail" >
+            android:label="@string/name_binder_card_detail"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 
